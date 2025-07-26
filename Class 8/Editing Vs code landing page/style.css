@@ -1,0 +1,42 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+/* Container */
+.container {
+    background-color: black;
+    width: 1200px;
+    margin: 0 auto;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+}
+
+/* Language panel layout */
+.languagePanel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-inline: 2.5rem;
+}
+
+/* Image sizing in language panel */
+.languagePanel img {
+    height: 40px;
+    width: auto;
+}
+
+/* Flex container for language item */
+.flex {
+    display: flex;
+}
+
+/* Vertically center text beside icons */
+.verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
