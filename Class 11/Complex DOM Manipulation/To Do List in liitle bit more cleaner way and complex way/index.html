@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"></input>
+    <button onclick="addTodo()">Add Todo</button>
+
+</body>
+<script>
+    // let ctr = 1;
+
+    // function deleteTodo(index) {
+    //     const element = document.getElementById("todo-" + index);
+    //     element.parentNode.removeChild(element);
+    // }
+    function addTodo() {
+        // const inputEl = document.querySelector("input");
+        const value = document.querySelector("input").value;
+        const spanEl = document.createElement("span");
+        const buttonEl = document.createElement("button");
+        spanEl.innerHTML = value;
+        buttonEl.innerHTML = "Delete";
+        const newDivEl = document.createElement("div");
+
+        newDivEl.appendChild(spanEl);
+        newDivEl.appendChild(buttonEl);
+
+        // newDivEl.setAttribute("id", "todo-" + ctr);
+        // whenever we are creating a new div give it an id which will help in deleting that div in case of deletion.
+
+        // newDivEl.innerHTML = "<div>" + value + '</div> <button onclick="deleteTodo(' + ctr + ')">Delete</button>'; // here we have to put single quote after onclick as if we add double quotes JS will think that the string ends over there.
+        document.querySelector("body").appendChild(newDivEl);
+        // ctr = ctr + 1;
+
+
+    }
+
+</script>
+
+</html>
